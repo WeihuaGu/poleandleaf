@@ -5,7 +5,7 @@ import android.widget.FrameLayout;
 
 public class Scenery extends FrameLayout implements GameView {
 
-	 public float z;
+	  public float z;
      public float v;
      public int h, w;
      public Scenery(Context context) {

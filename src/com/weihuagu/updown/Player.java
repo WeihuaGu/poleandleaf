@@ -11,9 +11,10 @@ import android.widget.ImageView;
 
 public class Player extends ImageView implements GameView{
 	public float dv;
-
+    private int PLAYER_SIZE;
+    private int PLAYER_HIT_SIZE;
     private boolean mBoosting;
-
+     private int BOOST_DV;
     private final float[] sHull = new float[] {
             0.3f,  0f,    // left antenna
             0.7f,  0f,    // right antenna
@@ -29,13 +30,15 @@ public class Player extends ImageView implements GameView{
 	
 	public Player(Context context) {
         super(context);
-
+        this.PLAYER_SIZE=this.getResources().getDimensionPixelSize(R.dimen.player_size);
+        this.PLAYER_HIT_SIZE = this.getResources().getDimensionPixelSize(R.dimen.player_hit_size);
+        this.BOOST_DV=this.getResources().getDimensionPixelSize(R.dimen.boost_dv);
         setBackgroundResource(R.drawable.android);
     }
 
     public void prepareCheckIntersections() {
-        final int inset = (LLand.PARAMS.PLAYER_SIZE - LLand.PARAMS.PLAYER_HIT_SIZE)/2;
-        final int scale = LLand.PARAMS.PLAYER_HIT_SIZE;
+        final int inset = (PLAYER_SIZE - PLAYER_HIT_SIZE)/2;
+        final int scale = PLAYER_HIT_SIZE;
         final int N = sHull.length/2;
         for (int i=0; i<N; i++) {
             corners[i*2]   = scale * sHull[i*2]   + inset;
@@ -59,7 +62,7 @@ public class Player extends ImageView implements GameView{
         if (getVisibility() != View.VISIBLE) return; // not playing yet
 
         if (mBoosting) {
-            dv = -LLand.PARAMS.BOOST_DV;
+            dv = -BOOST_DV;
         } else {
             dv += LLand.PARAMS.G;
         }
@@ -77,7 +80,7 @@ public class Player extends ImageView implements GameView{
     @SuppressLint("NewApi")
 	public void boost() {
         mBoosting = true;
-        dv = -LLand.PARAMS.BOOST_DV;
+        dv = -BOOST_DV;
 
         animate().cancel();
         animate()
@@ -98,6 +101,13 @@ public class Player extends ImageView implements GameView{
                 .scaleY(1f)
 //                .translationZ(LLand.PARAMS.PLAYER_Z)
                 .setDuration(200);
+    }
+    public int getPLAYER_SIZE(){
+    	return this.PLAYER_SIZE;
+    	
+    }
+    public int getPLAYER_HIT_SIZE(){
+    	return this.PLAYER_HIT_SIZE;
     }
 
 }

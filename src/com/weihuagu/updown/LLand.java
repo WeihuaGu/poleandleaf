@@ -75,13 +75,12 @@ public class LLand extends FrameLayout {
     static class Params {
         public float TRANSLATION_PER_SEC;
         public int OBSTACLE_SPACING, OBSTACLE_PERIOD;
-        public int BOOST_DV;
-        public int PLAYER_HIT_SIZE;
-        public int PLAYER_SIZE;
+      
+       
         public int OBSTACLE_WIDTH, OBSTACLE_STEM_WIDTH;
         public int OBSTACLE_GAP;
         public int OBSTACLE_MIN;
-        public int BUILDING_WIDTH_MIN, BUILDING_WIDTH_MAX;
+       
         public int BUILDING_HEIGHT_MIN;
         public int CLOUD_SIZE_MIN, CLOUD_SIZE_MAX;
         public int STAR_SIZE_MIN, STAR_SIZE_MAX;
@@ -92,16 +91,15 @@ public class LLand extends FrameLayout {
             TRANSLATION_PER_SEC = res.getDimension(R.dimen.translation_per_sec);
             OBSTACLE_SPACING = res.getDimensionPixelSize(R.dimen.obstacle_spacing);
             OBSTACLE_PERIOD = (int) (OBSTACLE_SPACING / TRANSLATION_PER_SEC);
-            BOOST_DV = res.getDimensionPixelSize(R.dimen.boost_dv);
-            PLAYER_HIT_SIZE = res.getDimensionPixelSize(R.dimen.player_hit_size);
-            PLAYER_SIZE = res.getDimensionPixelSize(R.dimen.player_size);
+            
+            
+   
             OBSTACLE_WIDTH = res.getDimensionPixelSize(R.dimen.obstacle_width);
             OBSTACLE_STEM_WIDTH = res.getDimensionPixelSize(R.dimen.obstacle_stem_width);
             OBSTACLE_GAP = res.getDimensionPixelSize(R.dimen.obstacle_gap);
             OBSTACLE_MIN = res.getDimensionPixelSize(R.dimen.obstacle_height_min);
             BUILDING_HEIGHT_MIN = res.getDimensionPixelSize(R.dimen.building_height_min);
-            BUILDING_WIDTH_MIN = res.getDimensionPixelSize(R.dimen.building_width_min);
-            BUILDING_WIDTH_MAX = res.getDimensionPixelSize(R.dimen.building_width_max);
+         
             CLOUD_SIZE_MIN = res.getDimensionPixelSize(R.dimen.cloud_size_min);
             CLOUD_SIZE_MAX = res.getDimensionPixelSize(R.dimen.cloud_size_max);
             STAR_SIZE_MIN = res.getDimensionPixelSize(R.dimen.star_size_min);
@@ -309,15 +307,17 @@ public class LLand extends FrameLayout {
         mDroid = new Player(getContext());
         mDroid.setX(mWidth / 2);
         mDroid.setY(mHeight / 2);
-        addView(mDroid, new LayoutParams(PARAMS.PLAYER_SIZE, PARAMS.PLAYER_SIZE));
+        addView(mDroid, new LayoutParams(mDroid.getPLAYER_SIZE(), mDroid.getPLAYER_SIZE()));
 
         mAnim = new TimeAnimator();
+        /**
         mAnim.setTimeListener(new TimeAnimator.TimeListener() {
             @Override
             public void onTimeUpdate(TimeAnimator timeAnimator, long t, long dt) {
                 step(t, dt);
             }
         });
+        **/
     }
 
     private void setScore(int score) {
