@@ -13,15 +13,6 @@ public class Pop extends Obstacle {
         setBackgroundResource(LLand.POPS[idx]);
         setScaleX(Util.frand() < 0.5f ? -1 : 1);
         mRotate = LLand.POPS[idx+1] == 0 ? 0 : (Util.frand() < 0.5f ? -1 : 1);
-        /*
-        setOutlineProvider(new ViewOutlineProvider() {
-            @Override
-            public void getOutline(View view, Outline outline) {
-                final int pad = (int) (getWidth() * 0.02f);
-                outline.setOval(pad, pad, getWidth()-pad, getHeight()-pad);
-            }
-        });
-        */
     }
 
     public boolean intersects(Player p) {
