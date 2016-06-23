@@ -1,5 +1,6 @@
 package com.weihuagu.updown;
 
+import com.techjun.lland.R;
 import com.weihuagu.updown.Player;
 
 import android.content.Context;
@@ -10,9 +11,11 @@ public class Obstacle extends View implements GameView{
 	  public float h;
 
       public final Rect hitRect = new Rect();
+      private int TRANSLATION_PER_SEC;
 
       public Obstacle(Context context, float h) {
           super(context);
+          TRANSLATION_PER_SEC = this.getResources().getDimensionPixelSize(R.dimen.translation_per_sec);
           setBackgroundColor(0xFFFF0000);
           this.h = h;
       }
@@ -38,7 +41,7 @@ public class Obstacle extends View implements GameView{
 
       @Override
       public void step(long t_ms, long dt_ms, float t, float dt) {
-          setTranslationX(getTranslationX()-LLand.PARAMS.TRANSLATION_PER_SEC*dt);
+          setTranslationX(getTranslationX()-TRANSLATION_PER_SEC*dt);
           getHitRect(hitRect);
       }
 
