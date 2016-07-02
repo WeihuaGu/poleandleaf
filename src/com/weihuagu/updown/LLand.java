@@ -47,6 +47,7 @@ import android.widget.TextView;
 //import com.android.systemui.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.techjun.lland.R;
 
@@ -75,12 +76,9 @@ public class LLand extends FrameLayout {
     static class Params {
         public float TRANSLATION_PER_SEC;
         public int OBSTACLE_SPACING, OBSTACLE_PERIOD;
-      
-       
         public int OBSTACLE_WIDTH, OBSTACLE_STEM_WIDTH;
         public int OBSTACLE_GAP;
         public int OBSTACLE_MIN;
-       
         public int BUILDING_HEIGHT_MIN;
         public int CLOUD_SIZE_MIN, CLOUD_SIZE_MAX;
         public int STAR_SIZE_MIN, STAR_SIZE_MAX;
@@ -91,15 +89,11 @@ public class LLand extends FrameLayout {
             TRANSLATION_PER_SEC = res.getDimension(R.dimen.translation_per_sec);
             OBSTACLE_SPACING = res.getDimensionPixelSize(R.dimen.obstacle_spacing);
             OBSTACLE_PERIOD = (int) (OBSTACLE_SPACING / TRANSLATION_PER_SEC);
-            
-            
-   
             OBSTACLE_WIDTH = res.getDimensionPixelSize(R.dimen.obstacle_width);
             OBSTACLE_STEM_WIDTH = res.getDimensionPixelSize(R.dimen.obstacle_stem_width);
             OBSTACLE_GAP = res.getDimensionPixelSize(R.dimen.obstacle_gap);
             OBSTACLE_MIN = res.getDimensionPixelSize(R.dimen.obstacle_height_min);
             BUILDING_HEIGHT_MIN = res.getDimensionPixelSize(R.dimen.building_height_min);
-         
             CLOUD_SIZE_MIN = res.getDimensionPixelSize(R.dimen.cloud_size_min);
             CLOUD_SIZE_MAX = res.getDimensionPixelSize(R.dimen.cloud_size_max);
             STAR_SIZE_MIN = res.getDimensionPixelSize(R.dimen.star_size_min);
@@ -208,99 +202,21 @@ public class LLand extends FrameLayout {
 
         mObstaclesInPlay.clear();
 
-        mWidth = getWidth();
-        mHeight = getHeight();
-
-        /*
-        boolean showingSun = (mTimeOfDay == DAY || mTimeOfDay == SUNSET) && frand() > 0.25;
-        if (showingSun) {
-            final Star sun = new Star(getContext());
-            sun.setBackgroundResource(R.drawable.sun);
-            final int w = getResources().getDimensionPixelSize(R.dimen.sun_size);
-            sun.setTranslationX(frand(w, mWidth-w));
-            if (mTimeOfDay == DAY) {
-                sun.setTranslationY(frand(w, (mHeight * 0.66f)));
-                //sun.getBackground().setTint(0);
-            } else {
-                sun.setTranslationY(frand(mHeight * 0.66f, mHeight - w));
-                //sun.getBackground().setTintMode(PorterDuff.Mode.SRC_ATOP);
-                //sun.getBackground().setTint(0xC0FF8000);
-
-            }
-            addView(sun, new LayoutParams(w, w));
-        }
-        */
-
-        /*
-        if (!showingSun) {
-            final boolean dark = mTimeOfDay == NIGHT || mTimeOfDay == TWILIGHT;
-            final float ff = frand();
-            if ((dark && ff < 0.75f) || ff < 0.5f) {
-                final Star moon = new Star(getContext());
-                moon.setBackgroundResource(R.drawable.moon);   //Todo fix for kk
-                moon.getBackground().setAlpha(dark ? 255 : 128);
-                moon.setScaleX(frand() > 0.5 ? -1 : 1);
-                moon.setRotation(moon.getScaleX() * frand(5, 30));
-                final int w = getResources().getDimensionPixelSize(R.dimen.sun_size);
-                moon.setTranslationX(frand(w, mWidth - w));
-                moon.setTranslationY(frand(w, mHeight - w));
-                addView(moon, new LayoutParams(w, w));
-            }
-        }
-        */
-
-
-        final int mh = mHeight / 6;
-        final boolean cloudless = Util.frand() < 0.25;
-        final int N = 7;
-        for (i=0; i<N; i++) {
+       
+        List<Building> groupsbuildings = new BuildingFactory().getGroupBuildings(getContext());
+        for (i=0; i<groupsbuildings.size(); i++) {
             final float r1 = Util.frand();
-            final Scenery s;
-
-            /*
-            if (HAVE_STARS && r1 < 0.3 && mTimeOfDay != DAY) {
-                s = new Star(getContext());
-            } else if (r1 < 0.6 && !cloudless) {
-                s = new Cloud(getContext());
-            } else {
-                s = new Building(getContext());
-
-                s.z = (float)i/N;
-                //s.setTranslationZ(PARAMS.SCENERY_Z * (1+s.z));
-                s.v = 0.85f * s.z; // buildings move proportional to their distance
-                hsv[0] = 175;
-                hsv[1] = 0.25f;
-                hsv[2] = 1 * s.z;
-                s.setBackgroundColor(Color.HSVToColor(hsv));
-                s.h = irand(PARAMS.BUILDING_HEIGHT_MIN, mh);
-            }*/
-
-            s = new Building(getContext());
-
-            s.z = (float)i/N;
-            //s.setTranslationZ(PARAMS.SCENERY_Z * (1+s.z));
-            s.v = 0.85f * s.z; // buildings move proportional to their distance
-            hsv[0] = 175;
-            hsv[1] = 0.25f;
-            hsv[2] = 1 * s.z;
-            s.setBackgroundColor(Color.HSVToColor(hsv));
-            s.h = Util.irand(PARAMS.BUILDING_HEIGHT_MIN, mh);
-
-            final LayoutParams lp = new LayoutParams(s.w, s.h);
-            if (s instanceof Building) {
+            Building building=groupsbuildings.get(i);
+            final LayoutParams lp = new LayoutParams(building.w, building.h);
+            if (building instanceof Building) {
                 lp.gravity = Gravity.BOTTOM;
             } else {
                 lp.gravity = Gravity.TOP;
                 final float r = Util.frand();
-                //if (s instanceof Star) {
-                //    lp.topMargin = (int) (r * r * mHeight);
-                //} else {
-                    lp.topMargin = (int) (1 - r*r * mHeight/2) + mHeight/2;
-                //}
+                    lp.topMargin = (int) (1 - r*r * getHeight()/2) + getWidth()/2;
             }
-
-            addView(s, lp);
-            s.setTranslationX(Util.frand(-lp.width, mWidth + lp.width));
+            addView(building, lp);
+            building.setTranslationX(Util.frand(-lp.width, mWidth + lp.width));
         }
 
 
@@ -310,14 +226,13 @@ public class LLand extends FrameLayout {
         addView(mDroid, new LayoutParams(mDroid.getPLAYER_SIZE(), mDroid.getPLAYER_SIZE()));
 
         mAnim = new TimeAnimator();
-        /**
+
         mAnim.setTimeListener(new TimeAnimator.TimeListener() {
             @Override
             public void onTimeUpdate(TimeAnimator timeAnimator, long t, long dt) {
                 step(t, dt);
             }
         });
-        **/
     }
 
     private void setScore(int score) {
@@ -467,7 +382,7 @@ public class LLand extends FrameLayout {
                     .setStartDelay(d1)
                     .setDuration(250);
             mObstaclesInPlay.add(s1);
-
+/**
             final Obstacle p1 = new Pop(getContext(), PARAMS.OBSTACLE_WIDTH);
             addView(p1, new LayoutParams(
                     PARAMS.OBSTACLE_WIDTH,
@@ -485,7 +400,7 @@ public class LLand extends FrameLayout {
                     .setStartDelay(d1)
                     .setDuration(250);
             mObstaclesInPlay.add(p1);
-
+**/
             final int d2 = Util.irand(0,250);
             final Obstacle s2 = new Stem(getContext(),
                     mHeight - obstacley - PARAMS.OBSTACLE_GAP - yinset,

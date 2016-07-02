@@ -19,7 +19,7 @@ public class Obstacle extends View implements GameView{
           setBackgroundColor(0xFFFF0000);
           this.h = h;
       }
-
+      
       public boolean intersects(Player p) {
           final int N = p.corners.length/2;
           for (int i=0; i<N; i++) {

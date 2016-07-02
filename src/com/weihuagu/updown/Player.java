@@ -69,7 +69,7 @@ public class Player extends ImageView implements GameView{
         if (dv < -LLand.PARAMS.MAX_V) dv = -LLand.PARAMS.MAX_V;
         else if (dv > LLand.PARAMS.MAX_V) dv = LLand.PARAMS.MAX_V;
 
-        final float y = getTranslationY() + dv * dt;
+        final float y = getTranslationY() + dv * dt+5;
         setTranslationY(y < 0 ? 0 : y);
         setRotation(
                 90 + Util.lerp(Util.clamp(Util.rlerp(dv, LLand.PARAMS.MAX_V, -1 * LLand.PARAMS.MAX_V)), 90, -90));
