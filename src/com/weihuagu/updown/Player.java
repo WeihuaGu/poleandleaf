@@ -33,7 +33,7 @@ public class Player extends ImageView implements GameView{
         this.PLAYER_SIZE=this.getResources().getDimensionPixelSize(R.dimen.player_size);
         this.PLAYER_HIT_SIZE = this.getResources().getDimensionPixelSize(R.dimen.player_hit_size);
         this.BOOST_DV=this.getResources().getDimensionPixelSize(R.dimen.boost_dv);
-        setBackgroundResource(R.drawable.android);
+        setBackgroundResource(R.drawable.bird);
     }
 
     public void prepareCheckIntersections() {
