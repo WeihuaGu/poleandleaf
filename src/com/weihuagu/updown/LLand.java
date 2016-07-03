@@ -341,6 +341,7 @@ public class LLand extends FrameLayout {
             } else if (ob.cleared(mPlayer)) {
                 if (ob instanceof Stem) passedBarrier = true;
                 
+                
                 mObstaclesInPlay.remove(j);
             }
         }

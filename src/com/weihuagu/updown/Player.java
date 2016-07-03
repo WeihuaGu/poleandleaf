@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Player extends ImageView implements GameView{
-	public float dv;
+	 public float dv;
     private int PLAYER_SIZE;
     private int PLAYER_HIT_SIZE;
     private boolean mBoosting;

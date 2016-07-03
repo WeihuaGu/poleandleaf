@@ -7,6 +7,7 @@ import android.content.Context;
 public class Leaves extends Obstacle {
 	private int LEAVE_SIZE;
     private int LEAVE_HIT_SIZE;
+    int cx, cy, r;
 	public Leaves(Context context, float h) {
 		super(context, h);
 		// TODO Auto-generated constructor stub
@@ -29,7 +30,15 @@ public class Leaves extends Obstacle {
 	    }
 	 public void step(long t_ms, long dt_ms, float t, float dt) {
          setTranslationX(getTranslationX()-TRANSLATION_PER_SEC*2*dt);
+         cx = (hitRect.left + hitRect.right)/2;
+         cy = (hitRect.top + hitRect.bottom)/2;
+         r = getWidth()/2;
      }
+	 
+	 public boolean intersects(Player p) {
+	          
+	        return true;
+	 }
 	
 
 }
