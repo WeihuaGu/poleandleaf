@@ -28,7 +28,7 @@ public class Leaves extends Obstacle {
 	    	return this.LEAVE_HIT_SIZE;
 	    }
 	 public void step(long t_ms, long dt_ms, float t, float dt) {
-         setTranslationX(getTranslationX()-TRANSLATION_PER_SEC*dt);
+         setTranslationX(getTranslationX()-TRANSLATION_PER_SEC*2*dt);
      }
 	
 

@@ -229,12 +229,6 @@ public class LLand extends FrameLayout {
         mPlayer.setY(this.mHeight/ 2);
         addView(mPlayer, new LayoutParams(mPlayer.getPLAYER_SIZE(), mPlayer.getPLAYER_SIZE()));
         
-        Leaves mleave=new Leaves(getContext());
-        mleave.setX(this.mWidth-this.mWidth/7);
-        mleave.setY(this.mHeight/3);
-        addView(mleave, new LayoutParams(mleave.getLEAVE_SIZE(),mleave.getLEAVE_HIT_SIZE()));
-        
-
         mAnim = new TimeAnimator();
         mAnim.setTimeListener(new TimeAnimator.TimeListener() {
             @Override
@@ -346,6 +340,7 @@ public class LLand extends FrameLayout {
                 stop();
             } else if (ob.cleared(mPlayer)) {
                 if (ob instanceof Stem) passedBarrier = true;
+                
                 mObstaclesInPlay.remove(j);
             }
         }
@@ -393,25 +388,7 @@ public class LLand extends FrameLayout {
                     .setStartDelay(d1)
                     .setDuration(250);
             mObstaclesInPlay.add(s1);
-/**
-            final Obstacle p1 = new Pop(getContext(), PARAMS.OBSTACLE_WIDTH);
-            addView(p1, new LayoutParams(
-                    PARAMS.OBSTACLE_WIDTH,
-                    PARAMS.OBSTACLE_WIDTH,
-                    Gravity.TOP|Gravity.LEFT));
-            p1.setTranslationX(mWidth);
-            p1.setTranslationY(-PARAMS.OBSTACLE_WIDTH);
-            //p1.setTranslationZ(PARAMS.OBSTACLE_Z);
-            p1.setScaleX(0.25f);
-            p1.setScaleY(0.25f);
-            p1.animate()
-                    .translationY(s1.h-inset)
-                    .scaleX(1f)
-                    .scaleY(1f)
-                    .setStartDelay(d1)
-                    .setDuration(250);
-            mObstaclesInPlay.add(p1);
-**/
+
             final int d2 = Util.irand(0,250);
             final Obstacle s2 = new Stem(getContext(),
                     mHeight - obstacley - PARAMS.OBSTACLE_GAP - yinset,
@@ -428,25 +405,31 @@ public class LLand extends FrameLayout {
                     .setStartDelay(d2)
                     .setDuration(400);
             mObstaclesInPlay.add(s2);
-/**
-            final Obstacle p2 = new Pop(getContext(), PARAMS.OBSTACLE_WIDTH);
-            addView(p2, new LayoutParams(
-                    PARAMS.OBSTACLE_WIDTH,
-                    PARAMS.OBSTACLE_WIDTH,
-                    Gravity.TOP|Gravity.LEFT));
-            p2.setTranslationX(mWidth);
-            p2.setTranslationY(mHeight);
-            //p2.setTranslationZ(PARAMS.OBSTACLE_Z);
-            p2.setScaleX(0.25f);
-            p2.setScaleY(0.25f);
-            p2.animate()
-                    .translationY(mHeight-s2.h-yinset)
-                    .scaleX(1f)
-                    .scaleY(1f)
-                    .setStartDelay(d2)
-                    .setDuration(400);
-            mObstaclesInPlay.add(p2);
-            **/
+            
+            final int l1 = Util.irand(0,250);
+            Leaves mleave=new Leaves(getContext());
+            mleave.setX(this.mWidth);
+            mleave.setY(this.mHeight*0.2f);
+            addView(mleave, new LayoutParams(mleave.getLEAVE_SIZE(),mleave.getLEAVE_HIT_SIZE()));
+            mleave.setTranslationX(mWidth+inset);
+            mleave.animate()
+            .translationY(mHeight-s2.h)
+            .setStartDelay(d2)
+            .setDuration(700);
+            mObstaclesInPlay.add(mleave);
+            
+            
+            final int l2 = Util.irand(0,250);
+            Leaves mleave2=new Leaves(getContext());
+            mleave2.setX(this.mWidth);
+            mleave2.setY(this.mHeight*0.2f);
+            addView(mleave2, new LayoutParams(mleave2.getLEAVE_SIZE(),mleave2.getLEAVE_HIT_SIZE()));
+            mleave2.animate()
+            .translationY(mHeight-s2.h-mHeight/6)
+            .setStartDelay(d2)
+            .setDuration(600);
+            mObstaclesInPlay.add(mleave2);
+
         }
 
         if (DEBUG_DRAW) invalidate();
