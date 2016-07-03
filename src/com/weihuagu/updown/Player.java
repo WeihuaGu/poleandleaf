@@ -72,7 +72,7 @@ public class Player extends ImageView implements GameView{
         final float y = getTranslationY() + dv * dt+5;
         setTranslationY(y < 0 ? 0 : y);
         setRotation(
-                90 + Util.lerp(Util.clamp(Util.rlerp(dv, LLand.PARAMS.MAX_V, -1 * LLand.PARAMS.MAX_V)), 90, -90));
+                20+Util.lerp(Util.clamp(Util.rlerp(dv, LLand.PARAMS.MAX_V, -1 * LLand.PARAMS.MAX_V)), 90, -90));
 
         prepareCheckIntersections();
     }
@@ -84,12 +84,12 @@ public class Player extends ImageView implements GameView{
 
         animate().cancel();
         animate()
-                .scaleX(1.25f)
-                .scaleY(1.25f)
+                .scaleX(1.15f)
+                .scaleY(1.15f)
 //                .translationZ(LLand.PARAMS.PLAYER_Z_BOOST)
                 .setDuration(100);
-        setScaleX(1.25f);
-        setScaleY(1.25f);
+        setScaleX(1.15f);
+        setScaleY(1.15f);
     }
 
     public void unboost() {
