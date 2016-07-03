@@ -21,14 +21,7 @@ public class Stem extends Obstacle {
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        setWillNotDraw(false);/*
-        setOutlineProvider(new ViewOutlineProvider() {
-            @Override
-            public void getOutline(View view, Outline outline) {
-                outline.setRect(0, 0, getWidth(), getHeight());
-            }
-        });
-        */
+        setWillNotDraw(false);
     }
     @Override
     public void onDraw(Canvas c) {
@@ -36,7 +29,7 @@ public class Stem extends Obstacle {
         final int h = c.getHeight();
         final GradientDrawable g = new GradientDrawable();
         g.setOrientation(GradientDrawable.Orientation.LEFT_RIGHT);
-        g.setGradientCenter(w * 0.75f, 0);
+        g.setGradientCenter(w * 0.85f, 0);
         g.setColors(new int[] { 0xFFFFFFFF, 0xFFAAAAAA });
         g.setBounds(0, 0, w, h);
         g.draw(c);
@@ -48,6 +41,13 @@ public class Stem extends Obstacle {
         mShadow.lineTo(0, LLand.PARAMS.OBSTACLE_WIDTH/2);
         mShadow.close();
         c.drawPath(mShadow, mPaint);
+    }
+    
+
+    public void step(long t_ms, long dt_ms, float t, float dt) {
+    	super.step(t_ms, dt_ms, t, dt);
+        setTranslationY(getTranslationY()+50*dt);
+       
     }
 
 }

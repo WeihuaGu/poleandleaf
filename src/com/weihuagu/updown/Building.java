@@ -15,9 +15,11 @@ public class Building extends Scenery {
            this.BUILDING_WIDTH_MIN=this.getResources().getDimensionPixelSize(R.dimen.building_width_min);
            this.BUILDING_WIDTH_MAX=this.getResources().getDimensionPixelSize(R.dimen.building_width_max);
            this.BUILDING_HEIGHT_MIN=this.getResources().getDimensionPixelSize(R.dimen.building_height_min);
-           this.h = Util.irand(BUILDING_HEIGHT_MIN, getHeight()/6);
            this.w = Util.irand(BUILDING_WIDTH_MIN, BUILDING_WIDTH_MAX);
        }
+	   public void setHeight(int height){
+		   this.h=Util.irand(BUILDING_HEIGHT_MIN, height);
+	   }
 	   public void setBackColor(){
 	    	 hsv[0] = 175;
 	         hsv[1] = 0.25f;

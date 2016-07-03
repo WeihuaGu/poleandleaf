@@ -11,13 +11,17 @@ public class Obstacle extends View implements GameView{
 	  public float h;
 
       public final Rect hitRect = new Rect();
-      private int TRANSLATION_PER_SEC;
+      protected int TRANSLATION_PER_SEC;
 
       public Obstacle(Context context, float h) {
           super(context);
           TRANSLATION_PER_SEC = this.getResources().getDimensionPixelSize(R.dimen.translation_per_sec);
           setBackgroundColor(0xFFFF0000);
           this.h = h;
+      }
+      public Obstacle(Context context) {
+          super(context);
+          TRANSLATION_PER_SEC = this.getResources().getDimensionPixelSize(R.dimen.translation_per_sec);
       }
       
       public boolean intersects(Player p) {
