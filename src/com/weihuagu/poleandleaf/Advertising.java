@@ -4,7 +4,9 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.techjun.lland.R;
+import com.google.android.gms.ads.MobileAds;
+import com.weihuagu.poleandleaf.IAdView;
+import com.weihuagu.poleandleaf.R;
 
 import android.content.Context;
 import android.util.Log;
@@ -14,19 +16,32 @@ public class Advertising extends  AdListener{
 	private InterstitialAdAble adable;
 	private InterstitialAd mInterstitialAd;
 	private Context context;
+	private AdView view=null;
 	public Advertising(Context context, InterstitialAdAble able){
 		this.adable=able;
 		this.context=context;
-		mInterstitialAd = new InterstitialAd(context);
-		mInterstitialAd.setAdUnitId(context.getString(R.string.interstitial_ad_unit_id));
+		MobileAds.initialize(context, "ca-app-pub-4720896488551810~3556115884");
+		this.mInterstitialAd = new InterstitialAd(context);
+		this.mInterstitialAd.setAdUnitId("ca-app-pub-4720896488551810/3556115884");
+		this.mInterstitialAd.setAdListener(this);
+		AdRequest adRequest = new AdRequest.Builder().build();
+	    this.mInterstitialAd.loadAd(adRequest);
+	    Toast.makeText(context, "Ad will load", Toast.LENGTH_SHORT).show();
 		
+	}
+	public  Advertising(){
 		
-		
-	
+	}
+	public void loadBannerAd(IAdView adview){
+		this.view=adview.getAdView();
+		AdRequest adRequest = new AdRequest.Builder().build();
+		view.setAdListener(this);
+		view.loadAd(adRequest);
 	}
 	public void showInterstitial(){
-		 if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
-	            mInterstitialAd.show();
+		 if (mInterstitialAd.isLoaded()) {
+			   Log.v("admob", "Ad will show"+this.mInterstitialAd.getAdUnitId());
+	            this.mInterstitialAd.show();
 	        } else {
 	            Toast.makeText(this.context, "Ad did not load", Toast.LENGTH_SHORT).show();
 	            this.adable.startGame();

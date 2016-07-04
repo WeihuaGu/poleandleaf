@@ -49,12 +49,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.techjun.lland.R;
+import com.weihuagu.poleandleaf.R;
 
 @SuppressLint("NewApi")
 public class GameLayout extends FrameLayout implements InterstitialAdAble{
-
-	public static final String TAG = "LLand";
+	public Advertising ad=null;
+	public static final String TAG = "poleandleaf";
     public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
     public static final boolean DEBUG_DRAW = false; // DEBUG
     public static final boolean AUTOSTART = true;
@@ -140,6 +140,7 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
         setFocusable(true);
         PARAMS = new Params(getResources());
         mTimeOfDay = Util.irand(0, SKIES.length);
+        this.ad=new Advertising(context,this);
     }
 
     @Override
@@ -297,7 +298,8 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
                     }
                 }, 250);
         }
-        new Advertising(getContext(),this);
+        this.ad.showInterstitial();
+        L("game stop");
     }
 
    
@@ -578,13 +580,14 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
     //static method
     
     public static final void L(String s, Object ... objects) {
-        if (DEBUG) {
+       // if (DEBUG) {
             Log.d(TAG, String.format(s, objects));
-        }
+      //  }
     }
 	@Override
 	public void startGame() {
 		// TODO Auto-generated method stub
+		reset();
 		
 	}
 

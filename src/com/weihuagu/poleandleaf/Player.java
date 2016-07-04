@@ -1,7 +1,7 @@
 package com.weihuagu.poleandleaf;
 
-import com.techjun.lland.R;
 import com.weihuagu.poleandleaf.GameView;
+import com.weihuagu.poleandleaf.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

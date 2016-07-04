@@ -16,7 +16,9 @@
 
 package com.weihuagu.poleandleaf;
 
-import com.techjun.lland.R;
+import com.google.android.gms.ads.AdView;
+import com.weihuagu.poleandleaf.Advertising;
+import com.weihuagu.poleandleaf.R;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -24,7 +26,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements IAdView{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +35,18 @@ public class MainActivity extends Activity {
         world.setScoreField((TextView) findViewById(R.id.score));
         world.setSplash(findViewById(R.id.welcome));
         Log.v(GameLayout.TAG, "focus: " + world.requestFocus());
+        showBannerAd();
     }
+
+    private Advertising ad=new Advertising();
+	@Override
+	public AdView getAdView() {
+		// TODO Auto-generated method stub
+		AdView  view = (AdView)findViewById(R.id.adView_bottom);
+		return view;
+	}
+	public void showBannerAd(){
+			this.ad.loadBannerAd(this);
+		}
+		
 }

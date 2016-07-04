@@ -1,6 +1,6 @@
 package com.weihuagu.poleandleaf;
 
-import com.techjun.lland.R;
+import com.weihuagu.poleandleaf.R;
 
 import android.content.Context;
 
