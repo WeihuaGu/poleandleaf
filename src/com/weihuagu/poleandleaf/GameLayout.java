@@ -43,6 +43,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 //import com.android.systemui.R;
 
@@ -54,6 +55,7 @@ import com.weihuagu.poleandleaf.R;
 @SuppressLint("NewApi")
 public class GameLayout extends FrameLayout implements InterstitialAdAble{
 	public Advertising ad=null;
+	public int addelaytimes=0;
 	public static final String TAG = "poleandleaf";
     public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
     public static final boolean DEBUG_DRAW = false; // DEBUG
@@ -181,27 +183,29 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
 	@SuppressLint("NewApi")
 	private void reset() {
         L("reset");
-    
-        /**
-        final Drawable sky = new GradientDrawable(
-                GradientDrawable.Orientation.BOTTOM_TOP,
-                SKIES[mTimeOfDay]
-        );
-        sky.setDither(true);
-        setBackground(sky);
-        **/
-
-    //    mFlipped = Util.frand() > 0.5f;
-   //     setScaleX(mFlipped ? -1 : 1);
         setScore(0);
-
+        
+        mPlayer = new Player(this.getContext());
+        mPlayer.setX(this.getWidth()/ 2);
+        mPlayer.setY(this.getHeight()/ 2);
+      
         int i = getChildCount();
+        
+        this.addView(mPlayer, new LayoutParams(mPlayer.getPLAYER_SIZE(), mPlayer.getPLAYER_SIZE()));
         while (i-->0) {
             final View v = getChildAt(i);
             if (v instanceof GameView) {
                 removeViewAt(i);
             }
+            if(v instanceof Player){
+            	
+            }
+            	//removeViewAt(i);
         }
+
+       
+
+        
         mObstaclesInPlay.clear();
 
        
@@ -225,10 +229,7 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
         }
 
 
-        mPlayer = new Player(getContext());
-        mPlayer.setX(this.mWidth/ 2);
-        mPlayer.setY(this.mHeight/ 2);
-        addView(mPlayer, new LayoutParams(mPlayer.getPLAYER_SIZE(), mPlayer.getPLAYER_SIZE()));
+      
         
         mAnim = new TimeAnimator();
         mAnim.setTimeListener(new TimeAnimator.TimeListener() {
@@ -260,9 +261,7 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
             mLastPipeTime = getGameTime() - PARAMS.OBSTACLE_PERIOD;
 
             if (mSplash != null && mSplash.getAlpha() > 0f) {
-                //mSplash.setTranslationZ(PARAMS.HUD_Z);
-//                mSplash.animate().alpha(0).translationZ(0).setDuration(400);
-
+              
                 mScoreField.animate().translationY(0)
                         .setInterpolator(new DecelerateInterpolator())
                         .setDuration(1500);
@@ -283,6 +282,12 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
     }
 
     private void stop() {
+    	
+    	 if(this.addelaytimes==4){
+    	        this.ad.showInterstitial();
+    	        this.addelaytimes=0;
+    	        }
+    	        this.addelaytimes++;
         if (mAnimating) {
             mAnim.cancel();
             mAnim = null;
@@ -298,8 +303,10 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
                     }
                 }, 250);
         }
-        this.ad.showInterstitial();
         L("game stop");
+        
+       
+       
     }
 
    
@@ -587,7 +594,9 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
 	@Override
 	public void startGame() {
 		// TODO Auto-generated method stub
-		reset();
+		 getChildCount();
+		  
+	      
 		
 	}
 

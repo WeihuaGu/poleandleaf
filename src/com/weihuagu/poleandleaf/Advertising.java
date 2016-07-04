@@ -26,7 +26,6 @@ public class Advertising extends  AdListener{
 		this.mInterstitialAd.setAdListener(this);
 		AdRequest adRequest = new AdRequest.Builder().build();
 	    this.mInterstitialAd.loadAd(adRequest);
-	    Toast.makeText(context, "Ad will load", Toast.LENGTH_SHORT).show();
 		
 	}
 	public  Advertising(){
