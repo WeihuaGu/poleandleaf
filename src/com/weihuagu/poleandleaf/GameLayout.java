@@ -52,7 +52,7 @@ import java.util.List;
 import com.techjun.lland.R;
 
 @SuppressLint("NewApi")
-public class GameLayout extends FrameLayout {
+public class GameLayout extends FrameLayout implements InterstitialAdAble{
 
 	public static final String TAG = "LLand";
     public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
@@ -297,6 +297,7 @@ public class GameLayout extends FrameLayout {
                     }
                 }, 250);
         }
+        new Advertising(getContext(),this);
     }
 
    
@@ -581,6 +582,11 @@ public class GameLayout extends FrameLayout {
             Log.d(TAG, String.format(s, objects));
         }
     }
+	@Override
+	public void startGame() {
+		// TODO Auto-generated method stub
+		
+	}
 
     
    
