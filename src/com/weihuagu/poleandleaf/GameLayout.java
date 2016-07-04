@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.weihuagu.updown;
+package com.weihuagu.poleandleaf;
 
 import android.animation.TimeAnimator;
 import android.annotation.SuppressLint;
@@ -52,7 +52,7 @@ import java.util.List;
 import com.techjun.lland.R;
 
 @SuppressLint("NewApi")
-public class LLand extends FrameLayout {
+public class GameLayout extends FrameLayout {
 
 	public static final String TAG = "LLand";
     public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
@@ -129,13 +129,13 @@ public class LLand extends FrameLayout {
             { 0xFFa08020, 0xFF204080 }, // SUNSET
     };
     public static Params PARAMS;
-    public LLand(Context context) {
+    public GameLayout(Context context) {
         this(context, null);
     }
-    public LLand(Context context, AttributeSet attrs) {
+    public GameLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
-    public LLand(Context context, AttributeSet attrs, int defStyle) {
+    public GameLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setFocusable(true);
         PARAMS = new Params(getResources());

@@ -1,4 +1,4 @@
-package com.weihuagu.updown;
+package com.weihuagu.poleandleaf;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -37,8 +37,8 @@ public class Stem extends Obstacle {
         mShadow.reset();
         mShadow.moveTo(0,0);
         mShadow.lineTo(w, 0);
-        mShadow.lineTo(w, LLand.PARAMS.OBSTACLE_WIDTH/2+w*1.5f);
-        mShadow.lineTo(0, LLand.PARAMS.OBSTACLE_WIDTH/2);
+        mShadow.lineTo(w, GameLayout.PARAMS.OBSTACLE_WIDTH/2+w*1.5f);
+        mShadow.lineTo(0, GameLayout.PARAMS.OBSTACLE_WIDTH/2);
         mShadow.close();
         c.drawPath(mShadow, mPaint);
     }

@@ -1,7 +1,7 @@
-package com.weihuagu.updown;
+package com.weihuagu.poleandleaf;
 
 import com.techjun.lland.R;
-import com.weihuagu.updown.Player;
+import com.weihuagu.poleandleaf.Player;
 
 import android.content.Context;
 import android.graphics.Rect;

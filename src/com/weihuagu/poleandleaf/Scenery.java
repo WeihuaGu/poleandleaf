@@ -1,4 +1,4 @@
-package com.weihuagu.updown;
+package com.weihuagu.poleandleaf;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -18,7 +18,7 @@ public class Scenery extends FrameLayout implements GameView {
      }
      @Override
      public void step(long t_ms, long dt_ms, float t, float dt) {
-         setTranslationX(getTranslationX() - LLand.PARAMS.TRANSLATION_PER_SEC * dt * v);
+         setTranslationX(getTranslationX() - GameLayout.PARAMS.TRANSLATION_PER_SEC * dt * v);
      }
 
 }

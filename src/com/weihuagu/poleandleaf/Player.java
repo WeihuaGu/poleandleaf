@@ -1,7 +1,7 @@
-package com.weihuagu.updown;
+package com.weihuagu.poleandleaf;
 
 import com.techjun.lland.R;
-import com.weihuagu.updown.GameView;
+import com.weihuagu.poleandleaf.GameView;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -64,15 +64,15 @@ public class Player extends ImageView implements GameView{
         if (mBoosting) {
             dv = -BOOST_DV;
         } else {
-            dv += LLand.PARAMS.G;
+            dv += GameLayout.PARAMS.G;
         }
-        if (dv < -LLand.PARAMS.MAX_V) dv = -LLand.PARAMS.MAX_V;
-        else if (dv > LLand.PARAMS.MAX_V) dv = LLand.PARAMS.MAX_V;
+        if (dv < -GameLayout.PARAMS.MAX_V) dv = -GameLayout.PARAMS.MAX_V;
+        else if (dv > GameLayout.PARAMS.MAX_V) dv = GameLayout.PARAMS.MAX_V;
 
         final float y = getTranslationY() + dv * dt+5;
         setTranslationY(y < 0 ? 0 : y);
         setRotation(
-                20+Util.lerp(Util.clamp(Util.rlerp(dv, LLand.PARAMS.MAX_V, -1 * LLand.PARAMS.MAX_V)), 90, -90));
+                20+Util.lerp(Util.clamp(Util.rlerp(dv, GameLayout.PARAMS.MAX_V, -1 * GameLayout.PARAMS.MAX_V)), 90, -90));
 
         prepareCheckIntersections();
     }

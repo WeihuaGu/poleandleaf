@@ -1,6 +1,6 @@
-package com.weihuagu.updown;
+package com.weihuagu.poleandleaf;
 
-import com.weihuagu.updown.Player;
+import com.weihuagu.poleandleaf.Player;
 
 import android.content.Context;
 
@@ -9,10 +9,10 @@ public class Pop extends Obstacle {
     int cx, cy, r;
     public Pop(Context context, float h) {
         super(context, h);
-        int idx = 2*Util.irand(0, LLand.POPS.length/2);
-        setBackgroundResource(LLand.POPS[idx]);
+        int idx = 2*Util.irand(0, GameLayout.POPS.length/2);
+        setBackgroundResource(GameLayout.POPS[idx]);
         setScaleX(Util.frand() < 0.5f ? -1 : 1);
-        mRotate = LLand.POPS[idx+1] == 0 ? 0 : (Util.frand() < 0.5f ? -1 : 1);
+        mRotate = GameLayout.POPS[idx+1] == 0 ? 0 : (Util.frand() < 0.5f ? -1 : 1);
     }
 
     public boolean intersects(Player p) {

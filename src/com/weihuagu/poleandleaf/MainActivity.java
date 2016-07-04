@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.weihuagu.updown;
+package com.weihuagu.poleandleaf;
 
 import com.techjun.lland.R;
 
@@ -24,14 +24,14 @@ import android.util.Log;
 import android.widget.TextView;
 
 
-public class LLandActivity extends Activity {
+public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lland);
-        LLand world = (LLand) findViewById(R.id.world);
+        setContentView(R.layout.activity_main);
+        GameLayout world = (GameLayout) findViewById(R.id.world);
         world.setScoreField((TextView) findViewById(R.id.score));
         world.setSplash(findViewById(R.id.welcome));
-        Log.v(LLand.TAG, "focus: " + world.requestFocus());
+        Log.v(GameLayout.TAG, "focus: " + world.requestFocus());
     }
 }
