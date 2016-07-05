@@ -39,10 +39,10 @@ public class Advertising extends  AdListener{
 	}
 	public void showInterstitial(){
 		 if (mInterstitialAd.isLoaded()) {
-			   Log.v("admob", "Ad will show"+this.mInterstitialAd.getAdUnitId());
+			    Log.v("admob", "Ad will show"+this.mInterstitialAd.getAdUnitId());
 	            this.mInterstitialAd.show();
 	        } else {
-	            Toast.makeText(this.context, "Ad did not load", Toast.LENGTH_SHORT).show();
+	           Log.v("admob","Ad did not load");
 	            this.adable.startGame();
 	}
 	}

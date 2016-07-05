@@ -171,11 +171,7 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        stop();
-        reset();
-        if (AUTOSTART) {
-            start(false);
-        }
+    	L("size changed");
     }
 
     
@@ -184,15 +180,9 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
 	private void reset() {
         L("reset");
         setScore(0);
-        
-        mPlayer = new Player(this.getContext());
-        mPlayer.setX(this.getWidth()/ 2);
-        mPlayer.setY(this.getHeight()/ 2);
       
         int i = getChildCount();
-        
-        this.addView(mPlayer, new LayoutParams(mPlayer.getPLAYER_SIZE(), mPlayer.getPLAYER_SIZE()));
-        while (i-->0) {
+         while (i-->0) {
             final View v = getChildAt(i);
             if (v instanceof GameView) {
                 removeViewAt(i);
@@ -202,12 +192,13 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
             }
             	//removeViewAt(i);
         }
-
-       
-
-        
         mObstaclesInPlay.clear();
-
+        
+        mPlayer = new Player(this.getContext());
+        mPlayer.setX(this.getWidth()/ 2);
+        mPlayer.setY(this.getHeight()/ 2);
+        this.addView(mPlayer, new LayoutParams(mPlayer.getPLAYER_SIZE(), mPlayer.getPLAYER_SIZE()));
+        
        
         this.mWidth = getWidth();
         this.mHeight = getHeight();
@@ -229,8 +220,6 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
         }
 
 
-      
-        
         mAnim = new TimeAnimator();
         mAnim.setTimeListener(new TimeAnimator.TimeListener() {
             @Override
@@ -282,12 +271,7 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
     }
 
     private void stop() {
-    	
-    	 if(this.addelaytimes==4){
-    	        this.ad.showInterstitial();
-    	        this.addelaytimes=0;
-    	        }
-    	        this.addelaytimes++;
+    	L("game start to stop");
         if (mAnimating) {
             mAnim.cancel();
             mAnim = null;
@@ -305,6 +289,11 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
         }
         L("game stop");
         
+        if(this.addelaytimes==4){
+	        this.ad.showInterstitial();
+	        this.addelaytimes=0;
+	        }
+	        this.addelaytimes++;
        
        
     }
@@ -594,7 +583,7 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
 	@Override
 	public void startGame() {
 		// TODO Auto-generated method stub
-		 getChildCount();
+		 
 		  
 	      
 		
