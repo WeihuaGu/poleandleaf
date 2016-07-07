@@ -53,9 +53,9 @@ import java.util.List;
 import com.weihuagu.poleandleaf.R;
 
 @SuppressLint("NewApi")
-public class GameLayout extends FrameLayout implements InterstitialAdAble{
-	public Advertising ad=null;
-	public int addelaytimes=0;
+public class GameLayout extends FrameLayout {
+	
+	
 	public static final String TAG = "poleandleaf";
     public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
     public static final boolean DEBUG_DRAW = false; // DEBUG
@@ -142,7 +142,6 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
         setFocusable(true);
         PARAMS = new Params(getResources());
         mTimeOfDay = Util.irand(0, SKIES.length);
-        this.ad=new Advertising(context,this);
     }
 
     @Override
@@ -288,14 +287,7 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
                 }, 250);
         }
         L("game stop");
-        
-        if(this.addelaytimes==4){
-	        this.ad.showInterstitial();
-	        this.addelaytimes=0;
-	        }
-	        this.addelaytimes++;
-       
-       
+             
     }
 
    
@@ -576,18 +568,11 @@ public class GameLayout extends FrameLayout implements InterstitialAdAble{
     //static method
     
     public static final void L(String s, Object ... objects) {
-       // if (DEBUG) {
+        if (DEBUG) {
             Log.d(TAG, String.format(s, objects));
-      //  }
+        }
     }
-	@Override
-	public void startGame() {
-		// TODO Auto-generated method stub
-		 
-		  
-	      
-		
-	}
+	
 
     
    
