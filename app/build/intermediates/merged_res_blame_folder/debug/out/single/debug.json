@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_cloud.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/cloud.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_pop_pizza.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/pop_pizza.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_bird.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/bird.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_scorecard_gameover.xml.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/scorecard_gameover.xml"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_pop_vortex2.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/pop_vortex2.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_sun2.xml.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/sun2.xml"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_pop_belt.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/pop_belt.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_star.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/star.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_pop_stripes.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/pop_stripes.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/layout_activity_about.xml.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/layout/activity_about.xml"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_pop_swirl.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/pop_swirl.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_leave.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/leave.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_pop_droid.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/pop_droid.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_scorecard.xml.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/scorecard.xml"
+    },
+    {
+        "merged": "com.weihuagu.poleandleaf.app-merged_res-4:/layout_activity_about.xml.flat",
+        "source": "com.weihuagu.poleandleaf.app-main-6:/layout/activity_about.xml"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable-xhdpi_icon.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable-xhdpi/icon.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable-hdpi_icon.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_sun.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/sun.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/menu_main.xml.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/menu/main.xml"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_icon.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/icon.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/layout_activity_main.xml.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_pop_vortex.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/pop_vortex.png"
+    },
+    {
+        "merged": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-merged_res-4:/drawable_moon.png.flat",
+        "source": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-main-6:/drawable/moon.png"
+    }
+]

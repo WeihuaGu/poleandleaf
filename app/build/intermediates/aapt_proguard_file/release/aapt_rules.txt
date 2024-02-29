@@ -1,0 +1,4 @@
+-keep class com.weihuagu.poleandleaf.AboutActivity { <init>(); }
+-keep class com.weihuagu.poleandleaf.MainActivity { <init>(); }
+-keep class com.weihuagu.poleandleaf.GameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+

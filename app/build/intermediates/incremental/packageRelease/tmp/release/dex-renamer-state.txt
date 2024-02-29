@@ -1,0 +1,4 @@
+#Thu Feb 29 18:04:47 CST 2024
+base.0=/home/room/project/poleandleaf/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

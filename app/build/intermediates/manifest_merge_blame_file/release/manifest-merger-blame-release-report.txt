@@ -1,0 +1,50 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.weihuagu.poleandleaf"
+4    android:versionCode="2"
+5    android:versionName="1.1" >
+6
+7    <uses-sdk
+7-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:6:5-8:41
+8        android:minSdkVersion="23"
+8-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:7:9-35
+9        android:targetSdkVersion="33" />
+9-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:8:9-38
+10
+11    <application
+11-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:9:5-25:19
+12        android:allowBackup="true"
+12-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:10:9-35
+13        android:extractNativeLibs="false"
+14        android:icon="@drawable/icon"
+14-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:11:9-38
+15        android:label="@string/app_name" >
+15-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:12:9-41
+16        <activity
+16-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:13:9-21:20
+17            android:name="com.weihuagu.poleandleaf.MainActivity"
+17-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:15:13-65
+18            android:exported="true"
+18-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:14:6-29
+19            android:label="@string/app_name" >
+19-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:16:13-45
+20            <intent-filter>
+20-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:17:13-20:29
+21                <action android:name="android.intent.action.MAIN" />
+21-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:18:17-69
+21-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:18:25-66
+22
+23                <category android:name="android.intent.category.LAUNCHER" />
+23-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:19:17-77
+23-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:19:27-74
+24            </intent-filter>
+25        </activity>
+26        <activity
+26-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:22:9-24:48
+27            android:name="com.weihuagu.poleandleaf.AboutActivity"
+27-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:23:13-42
+28            android:label="@string/app_name" />
+28-->/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:24:13-45
+29    </application>
+30
+31</manifest>

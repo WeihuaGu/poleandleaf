@@ -1,0 +1,202 @@
+# compiler: R8
+# compiler_version: 8.2.47
+# min_api: 23
+# common_typos_disable
+# {"id":"com.android.tools.r8.mapping","version":"2.2"}
+# pg_map_id: ebbecf9
+# pg_map_hash: SHA-256 ebbecf98841cee384463306c40b31478d3cd2c8977f6f97941fd1169a0aed194
+android.support.annotation.Keep -> android.support.annotation.Keep:
+# {"id":"sourceFile","fileName":"Keep.java"}
+com.weihuagu.poleandleaf.AboutActivity -> com.weihuagu.poleandleaf.AboutActivity:
+# {"id":"sourceFile","fileName":"AboutActivity.java"}
+com.weihuagu.poleandleaf.Building -> a.a:
+# {"id":"sourceFile","fileName":"Building.java"}
+    int BUILDING_WIDTH_MIN -> e
+    int BUILDING_WIDTH_MAX -> f
+    int BUILDING_HEIGHT_MIN -> g
+    float[] hsv -> h
+    1:1:void <init>(android.content.Context):0:0 -> <init>
+    1:1:void setBackColor():0:0 -> b
+    1:1:void setHeight(int):0:0 -> setHeight
+com.weihuagu.poleandleaf.BuildingFactory -> a.b:
+# {"id":"sourceFile","fileName":"BuildingFactory.java"}
+    java.util.List groupsbuildings -> a
+    int N -> b
+    1:1:void <init>():0:0 -> <init>
+    1:1:java.util.List getGroupBuildings(android.content.Context):0:0 -> a
+com.weihuagu.poleandleaf.GameLayout -> com.weihuagu.poleandleaf.GameLayout:
+# {"id":"sourceFile","fileName":"GameLayout.java"}
+    float[] hsv -> a
+    android.animation.TimeAnimator mAnim -> b
+    android.widget.TextView mScoreField -> c
+    android.view.View mSplash -> d
+    com.weihuagu.poleandleaf.Player mPlayer -> e
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Lcom/weihuagu/poleandleaf/a;"}
+    java.util.ArrayList mObstaclesInPlay -> f
+    float t -> g
+    float dt -> h
+    int mScore -> i
+    float mLastPipeTime -> j
+    int mWidth -> k
+    int mHeight -> l
+    boolean mAnimating -> m
+    boolean mPlaying -> n
+    boolean mFrozen -> o
+    int mTimeOfDay -> p
+    boolean DEBUG -> q
+    android.graphics.Rect sTmpRect -> r
+    int[] POPS -> s
+    int[][] SKIES -> t
+    com.weihuagu.poleandleaf.GameLayout$Params PARAMS -> u
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Lcom/weihuagu/poleandleaf/GameLayout$c;"}
+    1:1:void <init>(android.content.Context,android.util.AttributeSet):0:0 -> <init>
+    2:2:void <init>(android.content.Context,android.util.AttributeSet,int):0:0 -> <init>
+    1:1:void L(java.lang.String,java.lang.Object[]):0:0 -> a
+    1:1:void access$000(com.weihuagu.poleandleaf.GameLayout,long,long):0:0 -> b
+    1:1:boolean access$102(com.weihuagu.poleandleaf.GameLayout,boolean):0:0 -> c
+    1:1:void addScore(int):0:0 -> d
+    1:1:void poke():0:0 -> e
+    1:1:void reset():0:0 -> f
+    1:1:void start(boolean):0:0 -> g
+    1:1:void step(long,long):0:0 -> h
+    1:1:void stop():0:0 -> i
+    1:1:void unpoke():0:0 -> j
+com.weihuagu.poleandleaf.GameLayout$1 -> com.weihuagu.poleandleaf.GameLayout$a:
+# {"id":"sourceFile","fileName":"GameLayout.java"}
+    com.weihuagu.poleandleaf.GameLayout this$0 -> a
+com.weihuagu.poleandleaf.GameLayout$2 -> com.weihuagu.poleandleaf.GameLayout$b:
+# {"id":"sourceFile","fileName":"GameLayout.java"}
+    com.weihuagu.poleandleaf.GameLayout this$0 -> a
+com.weihuagu.poleandleaf.GameLayout$Params -> com.weihuagu.poleandleaf.GameLayout$c:
+# {"id":"sourceFile","fileName":"GameLayout.java"}
+    float TRANSLATION_PER_SEC -> a
+    int OBSTACLE_SPACING -> b
+    int OBSTACLE_PERIOD -> c
+    int OBSTACLE_WIDTH -> d
+    int OBSTACLE_STEM_WIDTH -> e
+    int OBSTACLE_GAP -> f
+    int OBSTACLE_MIN -> g
+    int BUILDING_HEIGHT_MIN -> h
+    int CLOUD_SIZE_MIN -> i
+    int CLOUD_SIZE_MAX -> j
+    int STAR_SIZE_MIN -> k
+    int STAR_SIZE_MAX -> l
+    int G -> m
+    int MAX_V -> n
+    float SCENERY_Z -> o
+    float OBSTACLE_Z -> p
+    float PLAYER_Z -> q
+    float PLAYER_Z_BOOST -> r
+    float HUD_Z -> s
+com.weihuagu.poleandleaf.GameView -> a.c:
+# {"id":"sourceFile","fileName":"GameView.java"}
+    void step(long,long,float,float) -> a
+com.weihuagu.poleandleaf.Leaves -> a.d:
+# {"id":"sourceFile","fileName":"Leaves.java"}
+    int LEAVE_SIZE -> d
+    int LEAVE_HIT_SIZE -> e
+    int cx -> f
+    int cy -> g
+    int r -> h
+    1:1:void <init>(android.content.Context):0:0 -> <init>
+    1:1:void step(long,long,float,float):0:0 -> a
+    1:1:boolean intersects(com.weihuagu.poleandleaf.Player):0:0 -> c
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/weihuagu/poleandleaf/a;)Z"}
+    1:1:int getLEAVE_HIT_SIZE():0:0 -> getLEAVE_HIT_SIZE
+    1:1:int getLEAVE_SIZE():0:0 -> getLEAVE_SIZE
+com.weihuagu.poleandleaf.MainActivity -> com.weihuagu.poleandleaf.MainActivity:
+# {"id":"sourceFile","fileName":"MainActivity.java"}
+    1:1:void initResources():0:0 -> a
+com.weihuagu.poleandleaf.Obstacle -> a.e:
+# {"id":"sourceFile","fileName":"Obstacle.java"}
+    float h -> a
+    android.graphics.Rect hitRect -> b
+    int TRANSLATION_PER_SEC -> c
+    1:1:void <init>(android.content.Context):0:0 -> <init>
+    2:2:void <init>(android.content.Context,float):0:0 -> <init>
+    1:1:void step(long,long,float,float):0:0 -> a
+    1:1:boolean cleared(com.weihuagu.poleandleaf.Player):0:0 -> b
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/weihuagu/poleandleaf/a;)Z"}
+    1:1:boolean intersects(com.weihuagu.poleandleaf.Player):0:0 -> c
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lcom/weihuagu/poleandleaf/a;)Z"}
+com.weihuagu.poleandleaf.Player -> com.weihuagu.poleandleaf.a:
+# {"id":"sourceFile","fileName":"Player.java"}
+    float dv -> a
+    int PLAYER_SIZE -> b
+    int PLAYER_HIT_SIZE -> c
+    boolean mBoosting -> d
+    int BOOST_DV -> e
+    float[] sHull -> f
+    float[] corners -> g
+    1:1:void step(long,long,float,float):0:0 -> a
+    1:1:boolean below(int):0:0 -> b
+    1:1:void boost():0:0 -> c
+    1:1:void prepareCheckIntersections():0:0 -> d
+    1:1:void unboost():0:0 -> e
+com.weihuagu.poleandleaf.R$dimen -> a.f:
+    int G -> a
+    int boost_dv -> b
+    int building_height_min -> c
+    int building_width_max -> d
+    int building_width_min -> e
+    int cloud_size_max -> f
+    int cloud_size_min -> g
+    int hud_z -> h
+    int max_v -> i
+    int obstacle_gap -> j
+    int obstacle_height_min -> k
+    int obstacle_spacing -> l
+    int obstacle_stem_width -> m
+    int obstacle_width -> n
+    int obstacle_z -> o
+    int player_hit_size -> p
+    int player_size -> q
+    int player_z -> r
+    int player_z_boost -> s
+    int scenery_z -> t
+    int star_size_max -> u
+    int star_size_min -> v
+    int translation_per_sec -> w
+com.weihuagu.poleandleaf.R$drawable -> a.g:
+    int bird -> a
+    int leave -> b
+    int pop_belt -> c
+    int pop_droid -> d
+    int pop_pizza -> e
+    int pop_stripes -> f
+    int pop_swirl -> g
+    int pop_vortex -> h
+    int pop_vortex2 -> i
+    int scorecard -> j
+    int scorecard_gameover -> k
+com.weihuagu.poleandleaf.R$id -> a.h:
+    int action_about -> a
+    int score -> b
+    int welcome -> c
+    int world -> d
+com.weihuagu.poleandleaf.R$layout -> a.i:
+    int activity_about -> a
+    int activity_main -> b
+com.weihuagu.poleandleaf.R$menu -> a.j:
+    int main -> a
+com.weihuagu.poleandleaf.Scenery -> com.weihuagu.poleandleaf.b:
+# {"id":"sourceFile","fileName":"Scenery.java"}
+    float z -> a
+    float v -> b
+    int h -> c
+    int w -> d
+    1:1:void step(long,long,float,float):0:0 -> a
+com.weihuagu.poleandleaf.Stem -> com.weihuagu.poleandleaf.c:
+# {"id":"sourceFile","fileName":"Stem.java"}
+    android.graphics.Paint mPaint -> d
+    android.graphics.Path mShadow -> e
+    boolean mDrawShadow -> f
+    1:1:void step(long,long,float,float):0:0 -> a
+com.weihuagu.poleandleaf.Util -> a.k:
+# {"id":"sourceFile","fileName":"Util.java"}
+    1:1:float clamp(float):0:0 -> a
+    1:1:float frand():0:0 -> b
+    1:1:float frand(float,float):0:0 -> c
+    1:1:int irand(int,int):0:0 -> d
+    1:1:float lerp(float,float,float):0:0 -> e
+    1:1:float rlerp(float,float,float):0:0 -> f

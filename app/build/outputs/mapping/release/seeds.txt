@@ -1,0 +1,19 @@
+com.weihuagu.poleandleaf.AboutActivity
+android.support.annotation.Keep
+com.weihuagu.poleandleaf.MainActivity
+com.weihuagu.poleandleaf.GameLayout
+com.weihuagu.poleandleaf.GameLayout: void setScoreField(android.widget.TextView)
+com.weihuagu.poleandleaf.AboutActivity: AboutActivity()
+com.weihuagu.poleandleaf.Building: void setHeight(int)
+com.weihuagu.poleandleaf.GameLayout: int getGameHeight()
+com.weihuagu.poleandleaf.Player: int getPLAYER_SIZE()
+com.weihuagu.poleandleaf.MainActivity: MainActivity()
+com.weihuagu.poleandleaf.GameLayout: GameLayout(android.content.Context,android.util.AttributeSet)
+com.weihuagu.poleandleaf.GameLayout: void setSplash(android.view.View)
+com.weihuagu.poleandleaf.GameLayout: int getGameWidth()
+com.weihuagu.poleandleaf.Player: int getPLAYER_HIT_SIZE()
+com.weihuagu.poleandleaf.GameLayout: void setScore(int)
+com.weihuagu.poleandleaf.GameLayout: float getGameTime()
+com.weihuagu.poleandleaf.Leaves: int getLEAVE_HIT_SIZE()
+com.weihuagu.poleandleaf.Leaves: int getLEAVE_SIZE()
+com.weihuagu.poleandleaf.GameLayout: float getLastTimeStep()

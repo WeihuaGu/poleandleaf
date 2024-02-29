@@ -1,0 +1,147 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/room/.gradle/daemon/8.2/com.weihuagu.poleandleaf.app-mergeDebugResources-2:/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/room/project/poleandleaf/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "6,15",
+                        "startColumns": "4,4",
+                        "startOffsets": "186,510",
+                        "endLines": "12,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "472,665"
+                    },
+                    "to": {
+                        "startLines": "36,39",
+                        "startColumns": "4,4",
+                        "startOffsets": "1737,1820",
+                        "endLines": "38,41",
+                        "endColumns": "12,12",
+                        "endOffsets": "1815,1887"
+                    }
+                },
+                {
+                    "source": "/home/room/project/poleandleaf/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "22,20,25,21,19,24,26,23",
+                        "startColumns": "5,4,5,5,4,6,6,5",
+                        "startOffsets": "885,786,1142,831,745,1056,1190,963",
+                        "endColumns": "77,43,46,53,40,86,89,91",
+                        "endOffsets": "957,825,1183,879,781,1136,1273,1049"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30,31,32,33,34",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "1171,1248,1292,1338,1391,1432,1517,1605",
+                        "endColumns": "76,43,45,52,40,84,87,90",
+                        "endOffsets": "1243,1287,1333,1386,1427,1512,1600,1691"
+                    }
+                },
+                {
+                    "source": "/home/room/project/poleandleaf/app/src/main/res/values/lland_strings.xml",
+                    "from": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "806",
+                        "endColumns": "40",
+                        "endOffsets": "842"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "1696",
+                        "endColumns": "40",
+                        "endOffsets": "1732"
+                    }
+                },
+                {
+                    "source": "/home/room/project/poleandleaf/app/src/main/res/values/lland_config.xml",
+                    "from": {
+                        "startLines": "38,22,31,30,29,33,32,44,39,35,27,28,20,26,25,41,23,24,42,43,40,37,36,34,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1519,781,1206,1155,1105,1303,1257,1759,1552,1390,1009,1054,680,958,912,1631,822,869,1673,1713,1591,1475,1431,1350,729",
+                        "endColumns": "32,40,50,50,49,46,45,36,38,40,44,50,48,50,45,41,46,42,39,45,39,43,43,39,51",
+                        "endOffsets": "1547,817,1252,1201,1150,1345,1298,1791,1586,1426,1049,1100,724,1004,953,1668,864,907,1708,1754,1626,1514,1470,1385,776"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,88,129,180,231,281,328,374,411,450,491,536,587,636,687,733,775,822,865,905,951,991,1035,1079,1119",
+                        "endColumns": "32,40,50,50,49,46,45,36,38,40,44,50,48,50,45,41,46,42,39,45,39,43,43,39,51",
+                        "endOffsets": "83,124,175,226,276,323,369,406,445,486,531,582,631,682,728,770,817,860,900,946,986,1030,1074,1114,1166"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.weihuagu.poleandleaf.app-mergeDebugResources-2:/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/room/project/poleandleaf/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "37,40",
+                        "startColumns": "4,4",
+                        "startOffsets": "1929,2012",
+                        "endLines": "39,42",
+                        "endColumns": "12,12",
+                        "endOffsets": "2007,2079"
+                    }
+                },
+                {
+                    "source": "/home/room/project/poleandleaf/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,27",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,4",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,1270",
+                        "endColumns": "-1,-1,-1,-1,-1,-1,-1,-1,191",
+                        "endOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,1457"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30,31,32,33,34,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1171,1248,1292,1338,1391,1432,1517,1605,1737",
+                        "endColumns": "76,43,45,52,40,84,87,90,191",
+                        "endOffsets": "1243,1287,1333,1386,1427,1512,1600,1691,1924"
+                    }
+                },
+                {
+                    "source": "/home/room/project/poleandleaf/app/src/main/res/values/lland_strings.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "1696",
+                        "endColumns": "40",
+                        "endOffsets": "1732"
+                    }
+                },
+                {
+                    "source": "/home/room/project/poleandleaf/app/src/main/res/values/lland_config.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,88,129,180,231,281,328,374,411,450,491,536,587,636,687,733,775,822,865,905,951,991,1035,1079,1119",
+                        "endColumns": "32,40,50,50,49,46,45,36,38,40,44,50,48,50,45,41,46,42,39,45,39,43,43,39,51",
+                        "endOffsets": "83,124,175,226,276,323,369,406,445,486,531,582,631,682,728,770,817,860,900,946,986,1030,1074,1114,1166"
+                    }
+                }
+            ]
+        }
+    ]
+}

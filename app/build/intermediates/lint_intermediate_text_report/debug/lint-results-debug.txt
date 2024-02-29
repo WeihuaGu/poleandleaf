@@ -1,0 +1,337 @@
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/Stem.java:28: Warning: Calling Canvas.getWidth() is usually wrong; you should be calling getWidth() instead [CanvasSize]
+        final int w = c.getWidth();
+                      ~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/Stem.java:29: Warning: Calling Canvas.getHeight() is usually wrong; you should be calling getHeight() instead [CanvasSize]
+        final int h = c.getHeight();
+                      ~~~~~~~~~~~~~
+
+   Explanation for issues of type "CanvasSize":
+   In a custom view's draw implementation, you should normally call getWidth
+   and getHeight on the custom view itself, not on the canvas instance.
+
+   Canvas width and height are the width and height of the Canvas, which is
+   not always the same as size of the view.
+
+   In the hardware accelerated path the width and height of the canvas
+   typically always match that of the View because every view goes to its own
+   recorded DisplayList. But in software rendering there's just one canvas
+   that is clipped and transformed as it makes its way through the View tree,
+   and otherwise remains the same Canvas object for every View's draw method.
+
+   You should only use Canvas state to adjust how much you draw, such as a
+   quick-reject for early work avoidance if it's going to be clipped away, but
+   not what you draw.
+
+/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:8: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        android:targetSdkVersion="33" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/build.gradle:28: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 33
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/Leaves.java:20: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+   setBackgroundResource(R.drawable.leave);
+ ~~
+    /home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/Leaves.java:19: Previous line indentation here
+
+   Explanation for issues of type "SuspiciousIndentation":
+   This check looks for cases where the indentation suggests a grouping that
+   isn't actually there in the code. A common example of this would be
+   something like
+   if (column > width)
+       line++
+       column = 0
+   Here, the column = 0 line will be executed every single time, not just if
+   the condition is true.
+
+   Available options:
+
+   **always-run** (default is false):
+   Whether this check should be included while editing.
+
+   While you're editing, it's common to have a temporary situation where you have suspicious indentation scenarios -- e.g. you start typing an `if` statement on the line above something you want to make conditional, and you haven't indented it yet. It can be distracting and misleading to suddenly have both statements light up as errors. Therefore, lint will avoid including this check when running on the fly in the editor, unless it looks like the file has not been recently edited. With this option, you can turn it on in all cases.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="SuspiciousIndentation">
+           <option name="always-run" value="false" />
+       </issue>
+   </lint>
+   ```
+
+/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:16: Warning: Redundant label can be removed [RedundantLabel]
+            android:label="@string/app_name" >
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:24: Warning: Redundant label can be removed [RedundantLabel]
+            android:label="@string/app_name" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RedundantLabel":
+   When an activity does not have a label attribute, it will use the one from
+   the application tag. Since the application has already specified the same
+   label, the label on this activity can be omitted.
+
+/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:7: Warning: This minSdkVersion value (23) is not used; it is always overridden by the value specified in the Gradle build script (23) [GradleOverrides]
+        android:minSdkVersion="23"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/AndroidManifest.xml:8: Warning: This targetSdkVersion value (33) is not used; it is always overridden by the value specified in the Gradle build script (33) [GradleOverrides]
+        android:targetSdkVersion="33" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleOverrides":
+   The value of (for example) minSdkVersion is only used if it is not
+   specified in the build.gradle build scripts. When specified in the Gradle
+   build scripts, the manifest value is ignored and can be misleading, so
+   should be removed to avoid ambiguity.
+
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/GameLayout.java:523: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        final Paint pt = new Paint();
+                         ~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/GameLayout.java:550: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+                final Rect r = new Rect();
+                               ~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/GameLayout.java:557: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        final StringBuilder sb = new StringBuilder("obstacles: ");
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/Stem.java:30: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        final GradientDrawable g = new GradientDrawable();
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/Stem.java:33: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        g.setColors(new int[] { 0xFFFFFFFF, 0xFFAAAAAA });
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DrawAllocation":
+   You should avoid allocating objects during a drawing or layout operation.
+   These are called frequently, so a smooth UI can be interrupted by garbage
+   collection pauses caused by the object allocations.
+
+   The way this is generally handled is to allocate the needed objects up
+   front and to reuse them for each drawing operation.
+
+   Some methods allocate memory on your behalf (such as Bitmap.create), and
+   these should be handled in the same way.
+
+/home/room/project/poleandleaf/app/src/main/res/values-v11: Warning: This folder configuration (v11) is unnecessary; minSdkVersion is 23. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+/home/room/project/poleandleaf/app/src/main/res/values-v14: Warning: This folder configuration (v14) is unnecessary; minSdkVersion is 23. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/home/room/project/poleandleaf/app/src/main/res/layout/activity_main.xml:3: Warning: This <FrameLayout> can be replaced with a <merge> tag [MergeRootFrame]
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+
+   Explanation for issues of type "MergeRootFrame":
+   If a <FrameLayout> is the root of a layout and does not provide background
+   or padding etc, it can often be replaced with a <merge> tag which is
+   slightly more efficient. Note that this depends on context, so make sure
+   you understand how the <merge> tag works before proceeding.
+
+   https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html
+
+/home/room/project/poleandleaf/app/src/main/res/drawable/cloud.png: Warning: The resource R.drawable.cloud appears to be unused [UnusedResources]
+/home/room/project/poleandleaf/app/src/main/res/values/lland_config.xml:35: Warning: The resource R.dimen.sun_size appears to be unused [UnusedResources]
+    <dimen name="sun_size">45dp</dimen>
+           ~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/values/lland_config.xml:36: Warning: The resource R.dimen.moon_size appears to be unused [UnusedResources]
+    <dimen name="moon_size">30dp</dimen>
+           ~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/values/lland_strings.xml:21: Warning: The resource R.string.lland appears to be unused [UnusedResources]
+    <string name="lland">L Land</string>
+            ~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/drawable/moon.png: Warning: The resource R.drawable.moon appears to be unused [UnusedResources]
+/home/room/project/poleandleaf/app/src/main/res/drawable/star.png: Warning: The resource R.drawable.star appears to be unused [UnusedResources]
+/home/room/project/poleandleaf/app/src/main/res/values/strings.xml:22: Warning: The resource R.string.action_settings appears to be unused [UnusedResources]
+     <string name="action_settings">Settings</string>
+             ~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/values/strings.xml:24: Warning: The resource R.string.interstitial_ad_unit_id appears to be unused [UnusedResources]
+     <string name="interstitial_ad_unit_id">ca-app-pub-4720896488551810/3556115884</string>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/values/strings.xml:25: Warning: The resource R.string.banner_ad_unit_id appears to be unused [UnusedResources]
+      <string name="banner_ad_unit_id">ca-app-pub-4720896488551810/3556115884</string>
+              ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/values/strings.xml:26: Warning: The resource R.string.action_setting appears to be unused [UnusedResources]
+     <string name="action_setting">设置</string>
+             ~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/values/styles.xml:7: Warning: The resource R.style.AppBaseTheme appears to be unused [UnusedResources]
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+           ~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/values/styles.xml:16: Warning: The resource R.style.AppTheme appears to be unused [UnusedResources]
+    <style name="AppTheme" parent="AppBaseTheme">
+           ~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/drawable/sun.png: Warning: The resource R.drawable.sun appears to be unused [UnusedResources]
+/home/room/project/poleandleaf/app/src/main/res/drawable/sun2.xml:16: Warning: The resource R.drawable.sun2 appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/home/room/project/poleandleaf/app/src/main/res/layout/activity_main.xml:45: Warning: This RelativeLayout view is unnecessary (no children, no background, no id, no style) [UselessLeaf]
+     <RelativeLayout
+      ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UselessLeaf":
+   A layout that has no children or no background can often be removed (since
+   it is invisible) for a flatter and more efficient layout hierarchy.
+
+/home/room/project/poleandleaf/app/src/main/res/drawable/bird.png: Warning: Found bitmap drawable res/drawable/bird.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/cloud.png: Warning: Found bitmap drawable res/drawable/cloud.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/icon.png: Warning: Found bitmap drawable res/drawable/icon.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/leave.png: Warning: Found bitmap drawable res/drawable/leave.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/moon.png: Warning: Found bitmap drawable res/drawable/moon.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/pop_belt.png: Warning: Found bitmap drawable res/drawable/pop_belt.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/pop_droid.png: Warning: Found bitmap drawable res/drawable/pop_droid.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/pop_pizza.png: Warning: Found bitmap drawable res/drawable/pop_pizza.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/pop_stripes.png: Warning: Found bitmap drawable res/drawable/pop_stripes.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/pop_swirl.png: Warning: Found bitmap drawable res/drawable/pop_swirl.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/pop_vortex.png: Warning: Found bitmap drawable res/drawable/pop_vortex.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/pop_vortex2.png: Warning: Found bitmap drawable res/drawable/pop_vortex2.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/star.png: Warning: Found bitmap drawable res/drawable/star.png in densityless folder [IconLocation]
+/home/room/project/poleandleaf/app/src/main/res/drawable/sun.png: Warning: Found bitmap drawable res/drawable/sun.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/home/room/project/poleandleaf/app/src/main/res: Warning: Missing density variation folders in src/main/res: drawable-mdpi, drawable-xxhdpi [IconMissingDensityFolder]
+
+   Explanation for issues of type "IconMissingDensityFolder":
+   Icons will look best if a custom version is provided for each of the major
+   screen density classes (low, medium, high, extra-high, extra-extra-high).
+   This lint check identifies folders which are missing, such as
+   drawable-hdpi.
+
+   Low density is not really used much anymore, so this check ignores the ldpi
+   density. To force lint to include it, set the environment variable
+   ANDROID_LINT_INCLUDE_LDPI=true. For more information on current density
+   usage, see https://developer.android.com/about/dashboards
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/Pop.java:7: Warning: Custom view Pop is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+public class Pop extends Obstacle {
+             ~~~
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/Stem.java:9: Warning: Custom view Stem is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+public class Stem extends Obstacle {
+             ~~~~
+
+   Explanation for issues of type "ViewConstructor":
+   Some layout tools (such as the Android layout editor) need to find a
+   constructor with one of the following signatures:
+   * View(Context context)
+   * View(Context context, AttributeSet attrs)
+   * View(Context context, AttributeSet attrs, int defStyle)
+
+   If your custom view needs to perform initialization which does not apply
+   when used in a layout editor, you can surround the given code with a check
+   to see if View#isInEditMode() is false, since that method will return false
+   at runtime but true within a user interface editor.
+
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/GameLayout.java:431: Warning: Custom view GameLayout overrides onTouchEvent but not performClick [ClickableViewAccessibility]
+    public boolean onTouchEvent(MotionEvent ev) {
+                   ~~~~~~~~~~~~
+
+   Explanation for issues of type "ClickableViewAccessibility":
+   If a View that overrides onTouchEvent or uses an OnTouchListener does not
+   also implement performClick and call it when clicks are detected, the View
+   may not handle accessibility actions properly. Logic handling the click
+   actions should ideally be placed in View#performClick as some accessibility
+   services invoke performClick when a click action should occur.
+
+/home/room/project/poleandleaf/app/src/main/res/layout/activity_main.xml:17: Warning: Hardcoded string "小心躲开树叶", should use @string resource [HardcodedText]
+            android:text="小心躲开树叶"
+            ~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/GameLayout.java:374: Warning: Use "Gravity.START" instead of "Gravity.LEFT" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                    Gravity.TOP|Gravity.LEFT));
+                                        ~~~~
+/home/room/project/poleandleaf/app/src/main/java/com/weihuagu/poleandleaf/GameLayout.java:391: Warning: Use "Gravity.START" instead of "Gravity.LEFT" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                    Gravity.TOP|Gravity.LEFT));
+                                        ~~~~
+/home/room/project/poleandleaf/app/src/main/res/layout/activity_main.xml:27: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginLeft="16dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/layout/activity_main.xml:28: Warning: Use "start" instead of "left" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+            android:layout_gravity="top|left"
+                                    ~~~~~~~~
+/home/room/project/poleandleaf/app/src/main/res/layout/activity_main.xml:48: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+    android:layout_gravity="bottom|right"
+                            ~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+0 errors, 56 warnings

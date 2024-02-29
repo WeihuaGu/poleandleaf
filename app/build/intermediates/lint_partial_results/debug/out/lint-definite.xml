@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="incidents">
+
+    <incident
+        id="GradleOverrides"
+        severity="warning"
+        message="This `minSdkVersion` value (`23`) is not used; it is always overridden by the value specified in the Gradle build script (`23`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="7"
+            column="9"
+            startOffset="191"
+            endLine="7"
+            endColumn="35"
+            endOffset="217"/>
+    </incident>
+
+    <incident
+        id="GradleOverrides"
+        severity="warning"
+        message="This `targetSdkVersion` value (`33`) is not used; it is always overridden by the value specified in the Gradle build script (`33`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="8"
+            column="9"
+            startOffset="226"
+            endLine="8"
+            endColumn="38"
+            endOffset="255"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details.">
+        <fix-attribute
+            description="Update targetSdkVersion to 34"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="targetSdkVersion"
+            value="34"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="8"
+            column="9"
+            startOffset="226"
+            endLine="8"
+            endColumn="38"
+            endOffset="255"/>
+    </incident>
+
+    <incident
+        id="RedundantLabel"
+        severity="warning"
+        message="Redundant label can be removed">
+        <fix-attribute
+            description="Delete label"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="label"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="16"
+            column="13"
+            startOffset="516"
+            endLine="16"
+            endColumn="45"
+            endOffset="548"/>
+    </incident>
+
+    <incident
+        id="RedundantLabel"
+        severity="warning"
+        message="Redundant label can be removed">
+        <fix-attribute
+            description="Delete label"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="label"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="24"
+            column="13"
+            startOffset="846"
+            endLine="24"
+            endColumn="45"
+            endOffset="878"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;小心躲开树叶&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="17"
+            column="13"
+            startOffset="667"
+            endLine="17"
+            endColumn="34"
+            endOffset="688"/>
+    </incident>
+
+    <incident
+        id="UselessLeaf"
+        severity="warning"
+        message="This `RelativeLayout` view is unnecessary (no children, no `background`, no `id`, no `style`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="45"
+            column="7"
+            startOffset="1709"
+            endLine="45"
+            endColumn="21"
+            endOffset="1723"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 23. Merge all the resources in this folder into `values`.">
+        <fix-data file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values-v11" folderName="values" requiresApi="23"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values-v11"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v14`) is unnecessary; `minSdkVersion` is 23. Merge all the resources in this folder into `values`.">
+        <fix-data file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values-v14" folderName="values" requiresApi="23"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values-v14"/>
+    </incident>
+
+    <incident
+        id="ClickableViewAccessibility"
+        severity="warning"
+        message="Custom view `GameLayout` overrides `onTouchEvent` but not `performClick`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/GameLayout.java"
+            line="431"
+            column="20"
+            startOffset="15241"
+            endLine="431"
+            endColumn="32"
+            endOffset="15253"/>
+    </incident>
+
+    <incident
+        id="DrawAllocation"
+        severity="warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/GameLayout.java"
+            line="523"
+            column="26"
+            startOffset="17682"
+            endLine="523"
+            endColumn="37"
+            endOffset="17693"/>
+    </incident>
+
+    <incident
+        id="DrawAllocation"
+        severity="warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/GameLayout.java"
+            line="550"
+            column="32"
+            startOffset="18676"
+            endLine="550"
+            endColumn="42"
+            endOffset="18686"/>
+    </incident>
+
+    <incident
+        id="DrawAllocation"
+        severity="warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/GameLayout.java"
+            line="557"
+            column="34"
+            startOffset="18848"
+            endLine="557"
+            endColumn="66"
+            endOffset="18880"/>
+    </incident>
+
+    <incident
+        id="SuspiciousIndentation"
+        severity="warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Leaves.java"
+            line="20"
+            column="2"
+            startOffset="606"
+            endLine="20"
+            endColumn="4"
+            endOffset="608"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Leaves.java"
+            line="19"
+            column="2"
+            startOffset="507"
+            endLine="19"
+            endColumn="4"
+            endOffset="509"
+            message="Previous line indentation here"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `Pop` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Pop.java"
+            line="7"
+            column="14"
+            startOffset="122"
+            endLine="7"
+            endColumn="17"
+            endOffset="125"/>
+    </incident>
+
+    <incident
+        id="ViewConstructor"
+        severity="warning"
+        message="Custom view `Stem` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Stem.java"
+            line="9"
+            column="14"
+            startOffset="225"
+            endLine="9"
+            endColumn="18"
+            endOffset="229"/>
+    </incident>
+
+    <incident
+        id="CanvasSize"
+        severity="warning"
+        message="Calling `Canvas.getWidth()` is usually wrong; you should be calling `getWidth()` instead">
+        <fix-replace
+            description="Call getWidth() instead"
+            oldPattern="(.*)getWidth"
+            replacement="">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Stem.java"
+                startOffset="727"
+                endOffset="739"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Stem.java"
+            line="28"
+            column="23"
+            startOffset="727"
+            endLine="28"
+            endColumn="35"
+            endOffset="739"/>
+    </incident>
+
+    <incident
+        id="CanvasSize"
+        severity="warning"
+        message="Calling `Canvas.getHeight()` is usually wrong; you should be calling `getHeight()` instead">
+        <fix-replace
+            description="Call getHeight() instead"
+            oldPattern="(.*)getHeight"
+            replacement="">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Stem.java"
+                startOffset="763"
+                endOffset="776"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Stem.java"
+            line="29"
+            column="23"
+            startOffset="763"
+            endLine="29"
+            endColumn="36"
+            endOffset="776"/>
+    </incident>
+
+    <incident
+        id="DrawAllocation"
+        severity="warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Stem.java"
+            line="30"
+            column="36"
+            startOffset="813"
+            endLine="30"
+            endColumn="58"
+            endOffset="835"/>
+    </incident>
+
+    <incident
+        id="DrawAllocation"
+        severity="warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/weihuagu/poleandleaf/Stem.java"
+            line="33"
+            column="21"
+            startOffset="967"
+            endLine="33"
+            endColumn="57"
+            endOffset="1003"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 34"
+            oldString="33"
+            replacement="34"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="28"
+            column="9"
+            startOffset="670"
+            endLine="28"
+            endColumn="21"
+            endOffset="682"/>
+    </incident>
+
+    <incident
+        id="MergeRootFrame"
+        severity="warning"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="3"
+            column="1"
+            startOffset="40"
+            endLine="52"
+            endColumn="15"
+            endOffset="1894"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/cloud.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/cloud.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/pop_stripes.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pop_stripes.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/sun.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/sun.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/moon.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/moon.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/bird.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/bird.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/icon.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/icon.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/star.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/star.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/pop_droid.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pop_droid.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/pop_belt.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pop_belt.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/pop_pizza.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pop_pizza.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/pop_vortex.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pop_vortex.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/leave.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/leave.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/pop_vortex2.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pop_vortex2.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/pop_swirl.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pop_swirl.png"/>
+    </incident>
+
+    <incident
+        id="IconMissingDensityFolder"
+        severity="warning"
+        message="Missing density variation folders in `src/main/res`: drawable-mdpi, drawable-xxhdpi">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}"/>
+    </incident>
+
+</incidents>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.weihuagu.poleandleaf.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.drawable.cloud"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/cloud.png"/>
+        <location id="R.drawable.sun"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/sun.png"/>
+        <location id="R.dimen.moon_size"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/lland_config.xml"
+            line="36"
+            column="12"
+            startOffset="1397"
+            endLine="36"
+            endColumn="28"
+            endOffset="1413"/>
+        <location id="R.string.interstitial_ad_unit_id"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="24"
+            column="14"
+            startOffset="971"
+            endLine="24"
+            endColumn="44"
+            endOffset="1001"/>
+        <location id="R.string.lland"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/lland_strings.xml"
+            line="21"
+            column="13"
+            startOffset="814"
+            endLine="21"
+            endColumn="25"
+            endOffset="826"/>
+        <location id="R.dimen.sun_size"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/lland_config.xml"
+            line="35"
+            column="12"
+            startOffset="1357"
+            endLine="35"
+            endColumn="27"
+            endOffset="1372"/>
+        <location id="R.string.banner_ad_unit_id"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="25"
+            column="15"
+            startOffset="1064"
+            endLine="25"
+            endColumn="39"
+            endOffset="1088"/>
+        <location id="R.drawable.sun2"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/sun2.xml"
+            line="16"
+            column="1"
+            startOffset="621"
+            endLine="24"
+            endColumn="10"
+            endOffset="1688"/>
+        <location id="R.string.action_settings"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="22"
+            column="14"
+            startOffset="839"
+            endLine="22"
+            endColumn="36"
+            endOffset="861"/>
+        <location id="R.style.AppBaseTheme"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
+            line="7"
+            column="12"
+            startOffset="193"
+            endLine="7"
+            endColumn="31"
+            endOffset="212"/>
+        <location id="R.style.AppTheme"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
+            line="16"
+            column="12"
+            startOffset="517"
+            endLine="16"
+            endColumn="27"
+            endOffset="532"/>
+        <location id="R.drawable.star"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/star.png"/>
+        <entry
+            name="model"
+            string="dimen[player_hit_size(U),moon_size(D),building_width_min(U),hud_z(U),G(U),obstacle_spacing(U),sun_size(D),obstacle_gap(U),boost_dv(U),cloud_size_max(U),player_z(U),building_height_min(U),player_z_boost(U),player_size(U),obstacle_width(U),building_width_max(U),star_size_max(U),scenery_z(U),cloud_size_min(U),obstacle_height_min(U),max_v(U),obstacle_z(U),obstacle_stem_width(U),star_size_min(U),translation_per_sec(U)],drawable[pop_swirl(U),star(D),pop_stripes(U),pop_belt(U),icon(U),scorecard_gameover(U),sun(D),pop_droid(U),scorecard(U),cloud(D),sun2(D),moon(D),pop_vortex(U),leave(U),bird(U),pop_vortex2(U),pop_pizza(U)],id[action_about(U),score(U),world(U),tip(D),welcome(U)],layout[activity_main(U),activity_about(U)],menu[main(U)],string[interstitial_ad_unit_id(D),action_settings(D),action_setting(D),iconattribution(U),action_about(U),app_name(U),lland(D),about_feedback(U),banner_ad_unit_id(D)],style[AppBaseTheme(D),AppTheme(D)];2f^21,30^39^35,31^36,3c^3b;;;"/>
+        <location id="R.drawable.moon"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/moon.png"/>
+        <location id="R.string.action_setting"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="26"
+            column="14"
+            startOffset="1150"
+            endLine="26"
+            endColumn="35"
+            endOffset="1171"/>
+    </map>
+
+</incidents>

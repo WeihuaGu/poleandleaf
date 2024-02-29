@@ -1,0 +1,7 @@
+com.weihuagu.poleandleaf.app-pngs-0 /home/room/project/poleandleaf/app/build/generated/res/pngs/debug
+com.weihuagu.poleandleaf.app-resValues-1 /home/room/project/poleandleaf/app/build/generated/res/resValues/debug
+com.weihuagu.poleandleaf.app-packageDebugResources-2 /home/room/project/poleandleaf/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.weihuagu.poleandleaf.app-packageDebugResources-3 /home/room/project/poleandleaf/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.weihuagu.poleandleaf.app-merged_res-4 /home/room/project/poleandleaf/app/build/intermediates/merged_res/debug
+com.weihuagu.poleandleaf.app-debug-5 /home/room/project/poleandleaf/app/src/debug/res
+com.weihuagu.poleandleaf.app-main-6 /home/room/project/poleandleaf/app/src/main/res
